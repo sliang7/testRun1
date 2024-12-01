@@ -1,69 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  
-  button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  main {
-    margin: 2rem 0;
-    width: 90%;
-    max-width: 800px;
-  }
-  
-  .content-block {
-    background-color: #f4f4f4;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .content-block h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-  }
-  
-  .content-block p,
-  .content-block code {
-    margin: 0.5rem 0;
-  }
-  
-  code {
-    display: block;
-    background-color: #e9ecef;
-    padding: 0.5rem;
-    font-family: monospace;
-    border-radius: 5px;
-    overflow-x: auto;
-  }
-  
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+#portfolio-container {
+  display: flex;
+  height: calc(100vh - 50px); /* Full height minus header */
+  overflow: hidden; /* Prevent overflow of the container */
+}
+
+.column {
+  flex: 1; /* Equal space for both columns */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.column:last-child {
+  border-right: none; /* No border for the last column */
+}
+
+.content-block {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+iframe, img {
+  max-width: 100%;
+  display: block;
+}
