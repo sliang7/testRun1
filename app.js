@@ -1,36 +1,24 @@
-const sections = document.querySelectorAll(".draggable");
-const portfolioContainer = document.getElementById("portfolio-sections");
-
-sections.forEach(section => {
-  section.addEventListener("dragstart", () => {
-    section.classList.add("dragging");
+document.getElementById("add-block").addEventListener("click", function () {
+    const container = document.getElementById("portfolio-container");
+  
+    // Create a new content block
+    const block = document.createElement("div");
+    block.className = "content-block";
+  
+    // Add default content
+    block.innerHTML = `
+      <h2>New Project</h2>
+      <p>Add your project description here.</p>
+      <textarea placeholder="Paste your code, embed, or text here"></textarea>
+      <button class="remove-block">Remove Block</button>
+    `;
+  
+    // Add remove functionality
+    block.querySelector(".remove-block").addEventListener("click", function () {
+      container.removeChild(block);
+    });
+  
+    // Append block to the container
+    container.appendChild(block);
   });
-
-  section.addEventListener("dragend", () => {
-    section.classList.remove("dragging");
-  });
-});
-
-portfolioContainer.addEventListener("dragover", e => {
-  e.preventDefault();
-  const draggingElement = document.querySelector(".dragging");
-  const afterElement = getDragAfterElement(portfolioContainer, e.clientY);
-  if (afterElement) {
-    portfolioContainer.insertBefore(draggingElement, afterElement);
-  } else {
-    portfolioContainer.appendChild(draggingElement);
-  }
-});
-
-function getDragAfterElement(container, y) {
-  const draggableElements = [...container.querySelectorAll(".draggable:not(.dragging)")];
-  return draggableElements.reduce((closest, child) => {
-    const box = child.getBoundingClientRect();
-    const offset = y - box.top - box.height / 2;
-    if (offset < 0 && offset > closest.offset) {
-      return { offset, element: child };
-    } else {
-      return closest;
-    }
-  }, { offset: Number.NEGATIVE_INFINITY }).element;
-}
+  

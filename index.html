@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drag-and-Drop Portfolio</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>My Portfolio</h1>
+    <button id="add-block">Add New Block</button>
   </header>
-  <main id="portfolio-sections">
-    <section class="draggable" draggable="true">About Me</section>
-    <section class="draggable" draggable="true">My Projects</section>
-    <section class="draggable" draggable="true">Skills</section>
-    <section class="draggable" draggable="true">Contact</section>
+  <main id="portfolio-container">
+    <!-- Initial Example Block -->
+    <div class="content-block">
+      <h2>Project Title</h2>
+      <p>Write a brief description of your project here.</p>
+      <code>&lt;!-- Example of embedded code block --&gt;</code>
+    </div>
   </main>
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

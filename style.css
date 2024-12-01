@@ -10,32 +10,60 @@ body {
   header {
     background-color: #333;
     color: #fff;
+    padding: 1rem;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
   }
   
   main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem;
+    margin: 2rem 0;
+    width: 90%;
     max-width: 800px;
   }
   
-  section {
+  .content-block {
     background-color: #f4f4f4;
+    margin-bottom: 1.5rem;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: calc(50% - 1rem);
-    text-align: center;
-    cursor: grab;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   
-  section.dragging {
-    opacity: 0.5;
-    border: 2px dashed #333;
+  .content-block h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .content-block p,
+  .content-block code {
+    margin: 0.5rem 0;
+  }
+  
+  code {
+    display: block;
+    background-color: #e9ecef;
+    padding: 0.5rem;
+    font-family: monospace;
+    border-radius: 5px;
+    overflow-x: auto;
   }
   
