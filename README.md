@@ -26,17 +26,15 @@ Each block includes a "Remove Block" button to delete unnecessary entries.
 ## How Students Can Use It
 Embed a YouTube video:
 
-## html
-Copy code
+## Iframe for videos
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
 Add an image:
 
-html
-Copy code
+## Images
 <img src="assets/image.jpg" alt="Project Screenshot" width="100%">
 Embed live code snippets using online platforms like CodePen:
 
-html
-Copy code
+## Iframe for codepen io
 <iframe height="300" style="width: 100%;" scrolling="no" title="CodePen Example" src="https://codepen.io/pen/embedded/example" frameborder="no"></iframe>
 This template empowers students to incrementally build their portfolios with minimal technical barriers while maintaining creative freedom. Let me know if you'd like additional features!
